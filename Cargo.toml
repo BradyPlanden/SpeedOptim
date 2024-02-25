@@ -14,3 +14,8 @@ features = ["abi3-py38"]
 
 [dependencies]
 rand = "0.8.4"
+
+[profile.release]
+debug = true       # Debug symbols for our profiler.
+lto = true         # Link-time optimization.
+codegen-units = 1  # Slower compilation but faster code. 
